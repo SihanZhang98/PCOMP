@@ -14,12 +14,12 @@ int inc[] = {0, 1, 3, 5, 7, 8, 10, 12, 13, 15, 17, 19, 20, 22};
 int noteValue = baseNote;
 //int count=0;
 int lastCount;
-int lastButtonState9 = 0;
-int lastButtonState10 = 0;
+int lastButtonState15 = 0;
+int lastButtonState16 = 0;
 
 void setup() {
-  for (int k = 0; k < keyCount; k++) { // iterate over the keys
-    pinMode(keys[k], INPUT_PULLUP);           // make each an input
+  for (int k = 0; k < keyCount; k++) { 
+    pinMode(keys[k], INPUT_PULLUP);          
   }
   //  Serial.begin(9600);
   pinMode(20, INPUT_PULLUP);
@@ -50,17 +50,17 @@ void loop() {
   }
   lastCount = count;
 
-  int buttonState9 = digitalRead(20);
-  if (lastButtonState9 != buttonState9) {
+  int buttonState15 = digitalRead(20);
+  if (lastButtonState15 != buttonState15) {
     if (buttonState9 ==  LOW) {
       baseNote = baseNote - 12;
     }
     lastButtonState9 = buttonState9;
   }
 
-  int buttonState10 = digitalRead(21);
-  if (lastButtonState10 != buttonState10) {
-    if (buttonState10 == LOW) {
+  int buttonState16 = digitalRead(21);
+  if (lastButtonState16 != buttonState16) {
+    if (buttonState16 == LOW) {
       baseNote = baseNote + 12;
     }
     lastButtonState10 = buttonState10;
