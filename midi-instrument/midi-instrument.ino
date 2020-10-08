@@ -55,7 +55,7 @@ void loop() {
     if (buttonState9 ==  LOW) {
       baseNote = baseNote - 12;
     }
-    lastButtonState9 = buttonState9;
+    lastButtonState15 = buttonState15;
   }
 
   int buttonState16 = digitalRead(21);
@@ -63,7 +63,7 @@ void loop() {
     if (buttonState16 == LOW) {
       baseNote = baseNote + 12;
     }
-    lastButtonState10 = buttonState10;
+    lastButtonState16 = buttonState16;
   }
 
 }
