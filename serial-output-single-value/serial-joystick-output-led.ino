@@ -1,6 +1,5 @@
 int brightness;
 void setup() {
-//  pinMode(8,OUTPUT);
 Serial.begin(9600);
 }
 
