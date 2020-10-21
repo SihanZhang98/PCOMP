@@ -8,7 +8,6 @@ void loop() {
   if (Serial.available() > 0) { 
     int inDataX = Serial.parseInt(); 
     int inDataY = Serial.parseInt();
-    // read it
     if (Serial.read() == '\n') {     
       analogWrite(5, inDataX);    
       analogWrite(6, inDataY);
